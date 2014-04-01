@@ -1,0 +1,17 @@
+doctype html
+html(ng-app="sand")
+  head
+    title gorilla test
+    script(src="/vendor/angular/angular.js")
+    script(src="/vendor/greensock/src/minified/TweenLite.min.js")
+    script(src="/gs/module.js")
+    script(src="/gs/controllers/studentsCtrl.js")
+
+    link(href="/styl/main.css",rel="stylesheet")
+  body
+    h1 Alive
+    div(ng-controller="studentsCtrl")
+      ul
+        li(ng-repeat="student in students")
+          | {{student}}
+          button(ng-click="delete(student)") X
